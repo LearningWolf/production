@@ -1,0 +1,160 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$launchpal-primary: mat.define-palette(mat.$indigo-palette);
+$launchpal-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$launchpal-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$launchpal-theme: mat.define-light-theme((
+  color: (
+    primary: $launchpal-primary,
+    accent: $launchpal-accent,
+    warn: $launchpal-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($launchpal-theme);
+
+/* You can add global styles to this file, and also import other style files */
+body{
+    font-family: 'Lato', sans-serif;
+    background-color: #f0f2f5;
+}
+// common styling
+a{
+    text-decoration: none !important;
+    color: black;
+}
+th,td{
+    font-size: 14px;
+}
+// common styling
+
+.sidebar {
+    // background: #36353b;
+    background-image: linear-gradient(195deg,#42424a,#191919);
+    // box-decoration-break: `;
+    box-shadow: 0px 0px 16px #FFBB69;
+    height: 90%;
+    color: #f4f5ff;
+    overflow: auto;
+    border-radius: 8px;
+    width: 95%;
+}
+.mainPage{
+    height: 100vh;
+    overflow-y: scroll;
+    // background-color: #0C1F3B;
+    // background-color: #315a97;
+}   
+.title-head{
+    font-size: 1.25rem;
+    color: #e91e63;
+    .bolder-title{
+        font-weight: 700;
+    }
+}
+select.sortBy{
+    width: 93px;
+    height: 37px;
+    background: #E6E6E6;
+    border-radius: 12px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.01em;
+}
+
+.btn.btn-dark{
+    background: #e91e63 !important;
+    border-color: #e91e63;
+}
+// .btnFnctn-outline{
+    
+//     border: 1px solid #000;
+// }
+// .form-select{
+//     width: fit-content !important;
+//     font-size: 16px;
+//     height: 40px;
+// }
+.bg-gray{
+    background-color: #E5E5E5;
+}
+h6{
+    font-size: 0.75rem !important;
+}
+.dateShow,.form-select{
+    height: 40px;
+    margin: 5px 0px;
+    font-size: 16px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px #aa6878;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+
+// material style
+
+.mat-input-element,.mat-form-field-appearance-legacy .mat-form-field-label{
+    // color: #fff !important;
+    // color: #0C1F3B !important;
+}
+.mat-form-field-appearance-legacy .mat-form-field-underline{
+    bottom: 0em !important;
+    height: 2px !important;
+}
+.mat-select-value{
+    // color: #fff !important;
+    margin-top: 1rem;
+}
+.mat-form-field-appearance-legacy .mat-form-field-wrapper{
+    padding-bottom: 1rem !important;
+    height: 50px;
+    padding-right: 5px !important;
+    // border: 1px solid black;    
+    background-color: #eaeaea !important;
+}
+.system{ 
+    // color: #fff;
+    mat-form-field{
+        width: 100% !important;
+    }
+    .mat-form-field-appearance-legacy .mat-form-field-wrapper{
+    margin-top: 0.5rem;
+    // background-color: #fff;
+    padding-top: 5px !important;
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+    border-radius: 4px;
+    }
+    .mat-form-field-appearance-legacy .mat-form-field-underline{
+        bottom: 0em !important;
+        left: 0px;
+        height: 0px !important;
+    }
+    .mat-input-element,.mat-form-field-appearance-legacy .mat-form-field-label,.mat-select-value{
+        color: #0c1f3b !important;
+        // color: #0C1F3B !important;
+    }
+}

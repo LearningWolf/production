@@ -1,0 +1,49 @@
+.functionTableHead{
+    background-color: #D9D9D966;
+    color: #606060;
+}
+.sortBy{
+    background: #E6E6E6;
+    padding: 8px 5px;
+}
+.functionTableBody td{
+    border-bottom: 0px !important;
+}
+.functionTableBody td select{
+    background: #F6F6F6;
+    width: 67px;
+    height: 29px;
+    color: #212529;
+}
+.functionTableBody td input{
+    width: 195px;
+    height: 29px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
+.btnFnctn{
+    // background: #43425D;
+    background: #000;
+    color: #E6E6E6;
+}
+.btnFnctn-outline{
+    // border: 1px solid #43425D;
+    border: 1px solid #000;
+}
+.addManually{
+    height: 36px;
+    left: 595px;
+    background-color: #F1F1F1;
+    color: #606060;
+}
+
+.modal-dialog {
+    max-width: 900px !important;
+    min-width: 50% !important
+}
+.modal-Btn{
+    height: 40px !important;
+    margin-top: 5px !important;
+    border-color: #3B86FF;
+    color: #3B86FF;
+}
